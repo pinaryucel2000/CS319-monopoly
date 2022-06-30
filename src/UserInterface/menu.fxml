@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.effect.ImageInput?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UserInterface.MenuController">
+    <children>
+        <ImageView fitHeight="900.0" fitWidth="1600.0" nodeOrientation="INHERIT" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="420.0" AnchorPane.topAnchor="0.0">
+            <image>
+                <Image url="@images/mainMenuBackground.png" />
+            </image>
+        </ImageView>
+        <Pane prefHeight="900.0" prefWidth="1600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Button fx:id="playButton" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="176.0" layoutY="366.0" mnemonicParsing="false" onAction="#playButtonClicked" onMouseClicked="#buttonClicked" prefHeight="84.0" prefWidth="165.0" style="-fx-background-color: #F0F8FF;" text="Play" textAlignment="CENTER">
+                    <font>
+                        <Font name="Arial Black" size="39.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                    <effect>
+                        <Reflection bottomOpacity="1.0" fraction="0.15" topOpacity="0.01" />
+                    </effect></Button>
+                <Button alignment="TOP_LEFT" contentDisplay="TOP" layoutX="1501.0" layoutY="130.0" mnemonicParsing="false" onMouseClicked="#buttonClicked" prefHeight="84.0" prefWidth="99.0" style="-fx-background-color: #F0F8FF;" text="Help">
+                    <font>
+                        <Font name="Arial Black" size="39.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                    <effect>
+                        <ImageInput>
+                            <source>
+                                <Image url="@images/help.png" />
+                            </source>
+                        </ImageInput>
+                    </effect>
+                </Button>
+                <Button fx:id="volumeButton" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="1501.0" layoutY="14.0" mnemonicParsing="false" onAction="#openVolumeSetting" onMouseClicked="#buttonClicked" prefHeight="84.0" prefWidth="99.0" style="-fx-background-color: #F0F8FF;" text="Volume">
+                    <font>
+                        <Font name="Arial Black" size="39.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                    <effect>
+                        <ImageInput>
+                            <source>
+                                <Image url="@images/volume.png" />
+                            </source>
+                        </ImageInput>
+                    </effect>
+                </Button>
+                <Button fx:id="exitButton" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="205.0" layoutY="517.0" mnemonicParsing="false" onAction="#exitButtonClicked" onMouseClicked="#buttonClicked" prefHeight="54.0" prefWidth="108.0" style="-fx-background-color: #FF0000;" text="Exit" textFill="WHITE">
+                    <font>
+                        <Font name="Arial Black" size="30.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                    <effect>
+                        <Reflection bottomOpacity="1.0" fraction="0.15" topOpacity="0.01" />
+                    </effect>
+                </Button>
+                <AnchorPane fx:id="volumePane" layoutX="1114.0" layoutY="9.0" prefHeight="107.0" prefWidth="382.0" visible="false">
+                    <children>
+                        <Slider fx:id="volumeSlider" layoutX="17.0" layoutY="12.0" prefHeight="84.0" prefWidth="348.0" />
+                    </children>
+                </AnchorPane>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>
